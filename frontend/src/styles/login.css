@@ -1,0 +1,744 @@
+/* =====================================================
+   PREMIUM SCHOOL ERP LOGIN
+   Designed for Campus Bites
+===================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Inter",sans-serif;
+}
+
+body{
+    background:#eef4ff;
+}
+
+.login-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at top left,#2563eb 0%,transparent 40%),
+    radial-gradient(circle at bottom right,#1d4ed8 0%,transparent 35%),
+    #f8fafc;
+}
+
+/* ==========================
+        FLOATING CIRCLES
+========================== */
+
+.login-bg-circle{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(30px);
+    opacity:.35;
+    animation:float 8s ease-in-out infinite;
+}
+
+.circle-one{
+    width:340px;
+    height:340px;
+    background:#3b82f6;
+    top:-80px;
+    left:-80px;
+}
+
+.circle-two{
+    width:280px;
+    height:280px;
+    background:#60a5fa;
+    bottom:-70px;
+    right:-70px;
+    animation-delay:2s;
+}
+
+.circle-three{
+    width:180px;
+    height:180px;
+    background:#93c5fd;
+    right:28%;
+    top:15%;
+    animation-delay:4s;
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-20px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+/* ==========================
+        WRAPPER
+========================== */
+
+.login-wrapper{
+
+width:1180px;
+max-width:95%;
+
+display:grid;
+
+grid-template-columns:
+1fr
+520px;
+
+background:rgba(255,255,255,.55);
+
+backdrop-filter:blur(25px);
+
+border-radius:30px;
+
+overflow:hidden;
+
+box-shadow:
+
+0 25px 70px rgba(0,0,0,.12);
+
+position:relative;
+
+z-index:10;
+
+}
+
+/* ==========================
+        LEFT SIDE
+========================== */
+
+.login-left{
+
+padding:70px;
+
+background:
+linear-gradient(
+135deg,
+#2563eb,
+#1d4ed8);
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:space-between;
+
+color:white;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.login-left::before{
+
+content:"";
+
+position:absolute;
+
+width:520px;
+
+height:520px;
+
+background:rgba(255,255,255,.08);
+
+border-radius:50%;
+
+right:-200px;
+
+top:-180px;
+
+}
+
+.brand{
+
+position:relative;
+
+z-index:2;
+
+}
+
+.brand-logo{
+
+width:90px;
+
+height:90px;
+
+border-radius:24px;
+
+background:rgba(255,255,255,.15);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+backdrop-filter:blur(20px);
+
+margin-bottom:25px;
+
+}
+
+.brand h1{
+
+font-size:46px;
+
+font-weight:800;
+
+margin-bottom:15px;
+
+}
+
+.brand p{
+
+font-size:17px;
+
+line-height:1.8;
+
+max-width:430px;
+
+opacity:.9;
+
+}
+
+/* ==========================
+        FEATURES
+========================== */
+
+.feature-list{
+
+margin-top:50px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:22px;
+
+}
+
+.feature-card{
+
+display:flex;
+
+gap:18px;
+
+padding:20px;
+
+background:rgba(255,255,255,.12);
+
+border-radius:18px;
+
+backdrop-filter:blur(15px);
+
+transition:.35s;
+
+}
+
+.feature-card:hover{
+
+transform:translateX(8px);
+
+background:rgba(255,255,255,.18);
+
+}
+
+.feature-card svg{
+
+width:30px;
+
+height:30px;
+
+flex-shrink:0;
+
+}
+
+.feature-card h3{
+
+font-size:18px;
+
+margin-bottom:6px;
+
+}
+
+.feature-card p{
+
+opacity:.85;
+
+line-height:1.6;
+
+font-size:14px;
+
+}
+
+.left-footer{
+
+margin-top:40px;
+
+opacity:.8;
+
+font-size:14px;
+
+}
+/* =====================================================
+                    RIGHT PANEL
+===================================================== */
+
+.login-right{
+    padding:60px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(255,255,255,.25);
+}
+
+.login-card{
+
+    width:100%;
+    max-width:430px;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(30px);
+
+    border:1px solid rgba(255,255,255,.5);
+
+    border-radius:28px;
+
+    padding:45px;
+
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.08);
+
+    animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:
+translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+translateY(0);
+
+}
+
+}
+
+.welcome-tag{
+
+display:inline-block;
+
+padding:8px 16px;
+
+background:#e0edff;
+
+color:#2563eb;
+
+font-size:13px;
+
+font-weight:700;
+
+border-radius:999px;
+
+margin-bottom:20px;
+
+}
+
+.login-card h2{
+
+font-size:34px;
+
+font-weight:800;
+
+color:#111827;
+
+margin-bottom:8px;
+
+}
+
+.subtitle{
+
+color:#64748b;
+
+margin-bottom:30px;
+
+line-height:1.6;
+
+}
+
+/* ==========================
+        FORM
+========================== */
+
+.input-group{
+
+margin-bottom:22px;
+
+}
+
+.input-group label{
+
+display:block;
+
+font-size:14px;
+
+font-weight:700;
+
+margin-bottom:10px;
+
+color:#334155;
+
+}
+
+.input-group input{
+
+width:100%;
+
+height:56px;
+
+border-radius:16px;
+
+border:2px solid #e2e8f0;
+
+padding:0 18px;
+
+font-size:15px;
+
+transition:.3s;
+
+background:white;
+
+}
+
+.input-group input:focus{
+
+outline:none;
+
+border-color:#2563eb;
+
+box-shadow:
+0 0 0 4px rgba(37,99,235,.15);
+
+}
+
+/* ==========================
+      PASSWORD
+========================== */
+
+.password-box{
+
+position:relative;
+
+}
+
+.password-box input{
+
+padding-right:58px;
+
+}
+
+.eye-btn{
+
+position:absolute;
+
+right:18px;
+
+top:50%;
+
+transform:translateY(-50%);
+
+background:none;
+
+border:none;
+
+cursor:pointer;
+
+color:#64748b;
+
+transition:.3s;
+
+}
+
+.eye-btn:hover{
+
+color:#2563eb;
+
+transform:
+translateY(-50%)
+scale(1.15);
+
+}
+
+/* ==========================
+      OPTIONS
+========================== */
+
+.login-options{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:28px;
+
+font-size:14px;
+
+}
+
+.remember{
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
+cursor:pointer;
+
+color:#475569;
+
+}
+
+.remember input{
+
+width:17px;
+
+height:17px;
+
+accent-color:#2563eb;
+
+}
+
+.forgot-btn{
+
+background:none;
+
+border:none;
+
+color:#2563eb;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.forgot-btn:hover{
+
+text-decoration:underline;
+
+}
+
+/* ==========================
+      BUTTON
+========================== */
+
+.login-btn{
+
+width:100%;
+
+height:58px;
+
+border:none;
+
+border-radius:18px;
+
+background:
+linear-gradient(
+135deg,
+#2563eb,
+#1d4ed8);
+
+color:white;
+
+font-size:17px;
+
+font-weight:700;
+
+cursor:pointer;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:10px;
+
+transition:.35s;
+
+box-shadow:
+0 18px 35px rgba(37,99,235,.30);
+
+}
+
+.login-btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:
+0 24px 45px rgba(37,99,235,.40);
+
+}
+
+.login-btn:active{
+
+transform:scale(.98);
+
+}
+
+.login-btn:disabled{
+
+opacity:.65;
+
+cursor:not-allowed;
+
+}
+
+/* ==========================
+      ERROR
+========================== */
+
+.login-error{
+
+background:#fee2e2;
+
+color:#b91c1c;
+
+padding:14px 18px;
+
+border-radius:14px;
+
+font-size:14px;
+
+margin-bottom:20px;
+
+border-left:5px solid #ef4444;
+
+animation:shake .35s ease;
+
+}
+
+@keyframes shake{
+
+25%{transform:translateX(-5px);}
+50%{transform:translateX(5px);}
+75%{transform:translateX(-5px);}
+100%{transform:translateX(0);}
+
+}
+
+/* ==========================
+      RESPONSIVE
+========================== */
+
+@media(max-width:980px){
+
+.login-wrapper{
+
+grid-template-columns:1fr;
+
+}
+
+.login-left{
+
+display:none;
+
+}
+
+.login-right{
+
+padding:25px;
+
+}
+
+.login-card{
+
+padding:35px 25px;
+
+}
+
+.login-card h2{
+
+font-size:28px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.login-page{
+
+padding:20px;
+
+}
+
+.login-card{
+
+border-radius:22px;
+
+padding:28px 20px;
+
+}
+
+.login-card h2{
+
+font-size:24px;
+
+}
+
+.input-group input{
+
+height:52px;
+
+font-size:14px;
+
+}
+
+.login-btn{
+
+height:54px;
+
+font-size:15px;
+
+}
+
+.subtitle{
+
+font-size:14px;
+
+}
+
+}
