@@ -85,7 +85,7 @@ const Navbar = ({ setShowLogin }) => {
   };
 
   const handleAdminAccess = () => {
-    if (adminKey === "SRFOODCOURT26") {
+    if (adminKey === "SRNESCAFE26") {
       window.location.href = "https://campusbitenescafeadmin.vercel.app/";
     } else {
       showNotification(
